@@ -64,6 +64,7 @@
 
 ;; don't back up filesOB
 (setq-default make-backup-files -1)
+(setq auto-save-default nil)
 
 ;; add hook for () pareness match.
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
