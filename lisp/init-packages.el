@@ -13,6 +13,7 @@
 			 hungry-delete
 			 swiper
 			 smartparens
+			 exec-path-from-shell
 			 counsel
 			 popwin
 			 ) "Default packages")
@@ -41,6 +42,9 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -48,7 +52,8 @@
 
 ;; (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
-
+;; remove right-' in emacs-lisp-mode
+(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
 
 ;; global auto-company-mode on 
 (global-company-mode t)

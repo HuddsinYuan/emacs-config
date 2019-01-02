@@ -8,6 +8,10 @@
 ;; electric indent mode off
 (electric-indent-mode t)
 
+(when (memq window-system '(mac ns))
+  (setq initial-frame-alist (quote ((fullscreen . maximized))))
+  )
+
 (setq-default cursor-type 'hbar)
 
 (provide 'init-ui)
