@@ -16,6 +16,7 @@
 			 exec-path-from-shell
 			 counsel
 			 popwin
+			 highlight-parentheses
 			 ) "Default packages")
 
 (setq package-selected-packages ychen/packages)
@@ -63,6 +64,8 @@
 ;; add theme for monokai
 (load-theme 'monokai t)
 
+(require 'highlight-parentheses)
+(global-highlight-parentheses-mode t)
 
 (require 'popwin)
 (popwin-mode t)
