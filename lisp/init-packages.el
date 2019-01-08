@@ -1,4 +1,4 @@
-(when (>= emacs-major-version 24)
+2(when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
@@ -17,6 +17,9 @@
 			 counsel
 			 popwin
 			 highlight-parentheses
+			 expand-region
+			 iedit
+			 org
 			 ) "Default packages")
 
 (setq package-selected-packages ychen/packages)
@@ -68,6 +71,6 @@
 (global-highlight-parentheses-mode t)
 
 (require 'popwin)
-(popwin-mode t)
+(popwin-mode 1)
 
 (provide 'init-packages)

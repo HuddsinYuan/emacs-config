@@ -578,15 +578,6 @@
 	nil "Heap (a.k.a. priority queue) data structure" single
 	((:url . "http://www.dr-qubit.org/emacs.php")
 	 (:keywords "extensions" "data structures" "heap" "priority queue"))])
- (helm-ebdb .
-	    [(1)
-	     ((helm
-	       (1 0))
-	      (ebdb
-	       (0 2)))
-	     "Helm integration for EBDB" single
-	     ((:url . "http://elpa.gnu.org/packages/helm-ebdb.html")
-	      (:keywords "mail" "convenience"))])
  (highlight-escape-sequences .
 			     [(0 4)
 			      nil "Highlight escape sequences" single

@@ -14,6 +14,28 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 
 (global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "M-s o") 'occur-dwim)
+;; (global-set-key (kbd "C-SPC") 'set-mark-command)
+
+(global-set-key (kbd "M-0") 'er/expand-region)
+
+(global-set-key (kbd "M-s e") 'iedit-mode)
+
+(defun split-window-horizontally-and-move()
+  (interactive)
+  (split-window-horizontally)
+  (other-window 1)
+  )
+
+(defun split-window-vertically-and-move()
+  (interactive)
+  (split-window-vertically)
+  (other-window 1)
+  )
+
+
+(global-set-key (kbd "C-c h") 'split-window-horizontally-and-move)
+(global-set-key (kbd "C-c v") 'split-window-vertically-and-move)
 
 
 ;;(require 'dired)

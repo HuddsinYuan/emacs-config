@@ -19,4 +19,6 @@
 
 (setq-default cursor-type 'hbar)
 
+(setq inhibit-splash-screen 1)
+
 (provide 'init-ui)
