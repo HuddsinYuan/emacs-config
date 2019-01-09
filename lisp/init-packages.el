@@ -1,4 +1,4 @@
-2(when (>= emacs-major-version 24)
+(when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://stable.melpa.org/packages/") t)
@@ -19,7 +19,9 @@
 			 highlight-parentheses
 			 expand-region
 			 iedit
-			 org
+			 helm-ag
+			 yasnippet
+			 auto-yasnippet
 			 ) "Default packages")
 
 (setq package-selected-packages ychen/packages)
@@ -72,5 +74,11 @@
 
 (require 'popwin)
 (popwin-mode 1)
+
+
+(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.13.0")
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (provide 'init-packages)

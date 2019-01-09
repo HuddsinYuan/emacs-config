@@ -21,21 +21,23 @@
 
 (global-set-key (kbd "M-s e") 'iedit-mode)
 
-(defun split-window-horizontally-and-move()
+(defun split-window-horizontally()
   (interactive)
   (split-window-horizontally)
   (other-window 1)
   )
 
-(defun split-window-vertically-and-move()
+(defun split-window-vertically()
   (interactive)
   (split-window-vertically)
   (other-window 1)
   )
 
 
-(global-set-key (kbd "C-c h") 'split-window-horizontally-and-move)
-(global-set-key (kbd "C-c v") 'split-window-vertically-and-move)
+(global-set-key (kbd "C-c h") 'split-window-horizontally)
+(global-set-key (kbd "C-c v") 'split-window-vertically)
+
+(global-set-key (kbd "C-c a") 'helm-do-ag-project-root)
 
 
 ;;(require 'dired)
@@ -44,5 +46,10 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
   )
 
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 (provide 'init-keybindings)
