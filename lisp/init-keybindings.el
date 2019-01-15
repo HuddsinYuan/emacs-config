@@ -39,6 +39,9 @@
 
 (global-set-key (kbd "C-c a") 'helm-do-ag-project-root)
 
+;; C-w use to cut thing.
+;; M-w use to copy thing.
+;; (global-set-key (kbd "C-w") 'backward-kill-word)
 
 ;;(require 'dired)
 ;; 避免用require 全部加载进来, 在开启dired mode之后才开始执行按键绑定 

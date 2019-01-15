@@ -28,6 +28,11 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+
+;; defadvice
+;; define-advice
+;; difference
+
 ;; hide ^M (dos coding ) in unix coding system
 (defun hidden-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
