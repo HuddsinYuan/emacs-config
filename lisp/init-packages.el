@@ -20,7 +20,9 @@
 			 expand-region
 			 iedit
 			 helm-ag
-			 yasnippet
+			 use-package
+			 pallet
+ 			 yasnippet
 			 auto-yasnippet
 			 ) "Default packages")
 
@@ -60,6 +62,10 @@
 (smartparens-global-mode t)
 ;; remove right-' in emacs-lisp-mode
 (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+
+;; remove right ` in emacs-lisp-mode
+(sp-local-pair 'emacs-lisp-mode "`" nil :actions nil)
+
 
 ;; global auto-company-mode on 
 (global-company-mode t)

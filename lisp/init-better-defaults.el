@@ -1,6 +1,5 @@
 (setq ring-bell-function 'ignore)
 
-
 ;; open line number
 (global-linum-mode t)
 
