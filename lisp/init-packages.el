@@ -7,12 +7,12 @@
 (require 'cl)
 
 ;; add packages
-(defvar ychen/packages '(
+(defvar ychen/packages '(		
 			 company
 			 monokai-theme
 			 hungry-delete
 			 swiper
-			 smartparens
+			 smartparens	
 			 exec-path-from-shell
 			 counsel
 			 popwin
